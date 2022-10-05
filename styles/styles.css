@@ -1,5 +1,12 @@
 /* CSS variable */
 :root {
+  /* Colors */
+  --bg-body: hsl(212, 45%, 89%);
+  --clr-light: hsl(220, 15%, 55%);
+  --clr-dark: hsl(218, 44%, 22%);
+
+  /* Fonts */
+  --base: 15px;
 }
 
 /* RESET */
@@ -14,10 +21,10 @@
 /* defaults */
 body {
   font-family: 'Outfit', sans-serif;
-  font-size: 15px;
+  font-size: var(--base);
   font-weight: 400;
-  background: hsl(212, 45%, 89%);
-  color: hsl(220, 15%, 55%);
+  background: var(--bg-body);
+  color: var(--clr-light);
 }
 
 img {
@@ -70,12 +77,9 @@ img {
 }
 
 .qr-heading {
-  color: hsl(218, 44%, 22%);
+  color: var(--clr-dark);
   font-weight: 700;
   margin: 1rem 0;
-}
-
-.qr-text {
 }
 
 /* Desktop - 1440px */
