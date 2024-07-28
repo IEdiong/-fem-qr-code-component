@@ -1,6 +1,7 @@
 /*! CSS variable */
 :root {
   /*? Colors */
+  --blue: hsla(216, 95%, 58%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --slate-300: hsla(212, 45%, 89%, 1);
   --slate-500: hsla(216, 15%, 48%, 1);
@@ -39,6 +40,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  position: relative;
 }
 
 img {
@@ -87,6 +89,20 @@ img {
   font: var(--fnt-outfit-bold);
   color: var(--slate-900);
   letter-spacing: var(--leading-bold);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--blue);
 }
 
 /*! Tablet - 764px */
