@@ -1,15 +1,25 @@
-/* CSS variable */
+/*! CSS variable */
 :root {
-  /* Colors */
-  --bg-body: hsl(212, 45%, 89%);
-  --clr-light: hsl(220, 15%, 55%);
-  --clr-dark: hsl(218, 44%, 22%);
+  /*? Colors */
+  --white: hsla(0, 0%, 100%, 1);
+  --slate-300: hsla(212, 45%, 89%, 1);
+  --slate-500: hsla(216, 15%, 48%, 1);
+  --slate-900: hsla(218, 44%, 22%, 1);
 
-  /* Fonts */
-  --base: 15px;
+  /*? Fonts */
+  --fnt-outfit-reg: 400 0.9375rem/1.4 'Outfit', sans-serif;
+  --fnt-outfit-bold: 700 1.375rem/1.2 'Outfit', sans-serif;
+
+  --leading-reg: 0.2px;
+  --leading-bold: 0px;
+
+  /* ? Spacings */
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-500: 2.5rem;
 }
 
-/* RESET */
+/*! RESET */
 *,
 *::after,
 *::before {
@@ -18,22 +28,25 @@
   box-sizing: border-box;
 }
 
-/* defaults */
+/*! Defaults */
 body {
-  font-family: 'Outfit', sans-serif;
-  font-size: var(--base);
-  font-weight: 400;
-  background: var(--bg-body);
-  color: var(--clr-light);
+  font: var(--fnt-outfit-reg);
+  letter-spacing: var(--leading-reg);
+  background: var(--slate-300);
+  color: var(--slate-500);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 img {
-  width: 100%;
-  max-width: 800px;
   display: block;
+  width: 100%;
 }
 
-/* Util classes */
+/*! Util classes */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -46,40 +59,35 @@ img {
   border: 0;
 }
 
-.container {
-  width: 90%;
-  max-width: 1165px;
-  /* margin: 0 auto; */
-  margin-inline: auto;
-}
-/* Mobile - 375px */
-.main {
-  padding-top: 5rem;
-}
-
-.qr-card {
-  background: white;
-  padding: 1rem 1rem 2.5rem 1rem;
-  margin-inline: auto;
-  border-radius: 1rem;
+/*! Mobile - 375px */
+.card {
   width: 20rem;
-  text-align: center;
-  box-shadow: 0px 10px 20px hsla(217, 45%, 22%, 0.267);
+  background: var(--white);
+  padding: var(--spacing-200) var(--spacing-200) var(--spacing-500);
+  border-radius: 1.25rem;
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
 }
 
-.qr-image {
-  border-radius: 1rem;
+.card__img {
+  border-radius: 0.625rem;
   overflow: hidden;
 }
 
-.qr-body {
-  padding: 0 0.8rem;
+.card__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-200);
+
+  margin-top: var(--spacing-300);
+  padding-inline: var(--spacing-200);
+  text-align: center;
 }
 
-.qr-heading {
-  color: var(--clr-dark);
-  font-weight: 700;
-  margin: 1rem 0;
+.card__body h2 {
+  font: var(--fnt-outfit-bold);
+  color: var(--slate-900);
+  letter-spacing: var(--leading-bold);
 }
 
-/* Desktop - 1440px */
+/*! Tablet - 764px */
+/*! Desktop - 1440px */
